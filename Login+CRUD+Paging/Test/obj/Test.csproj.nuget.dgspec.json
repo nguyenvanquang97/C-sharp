@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\A Quang\\source\\repos\\Test\\Test\\Test.csproj": {}
+    "C:\\Users\\A Quang\\source\\repos\\Login+CRUD+Paging\\Test\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\A Quang\\source\\repos\\Test\\Test\\Test.csproj": {
+    "C:\\Users\\A Quang\\source\\repos\\Login+CRUD+Paging\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\A Quang\\source\\repos\\Test\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\A Quang\\source\\repos\\Login+CRUD+Paging\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\A Quang\\source\\repos\\Test\\Test\\Test.csproj",
+        "projectPath": "C:\\Users\\A Quang\\source\\repos\\Login+CRUD+Paging\\Test\\Test.csproj",
         "packagesPath": "C:\\Users\\A Quang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\A Quang\\source\\repos\\Test\\Test\\obj\\",
+        "outputPath": "C:\\Users\\A Quang\\source\\repos\\Login+CRUD+Paging\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\A Quang\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -3,7 +3,7 @@
     "",
     "\\Test",
     "\\Test\\Controllers",
-    "\\Test\\Properties"
+    "\\Test\\Models"
   ],
   "SelectedNode": "\\Test\\Controllers\\BookController.cs",
   "PreviewInSolutionExplorer": false

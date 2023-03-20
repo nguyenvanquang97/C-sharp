@@ -26,8 +26,13 @@ namespace Test.Controllers
                   .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
                   .Take(validFilter.PageSize)
                   .ToListAsync();
+
             var totalRecords = await _booksContext.Books.CountAsync();
-            return Ok(new PagedResponse<List<Book>>(pagedData, validFilter.PageNumber, validFilter.PageSize));
+            var totalPages = (int)Math.Ceiling(totalRecords / (double)validFilter.PageSize);
+            var totalRecordsInAllPages = validFilter.PageSize * totalPages;
+
+
+            return Ok(new PagedResponse<List<Book>>(pagedData, totalRecords, totalPages, validFilter.PageNumber, validFilter.PageSize));
         }
 
         // GET api/<ValuesController>/5
