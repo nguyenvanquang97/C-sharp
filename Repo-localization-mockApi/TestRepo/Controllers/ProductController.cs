@@ -75,7 +75,7 @@ namespace TestRepo.Controllers
             var product = await _productRepository.Delete(id);
             if (product == null)
             {
-                var dos = stringLocalizer["Not found"];
+                var dos = stringLocalizer["Not found with id ="+id];
                 return Ok(dos.Value);
             }
 

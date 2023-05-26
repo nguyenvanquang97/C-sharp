@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Library",
+    "\\Library\\Repositories",
+    "\\Library\\Repositories\\PersonRepository",
     "\\TestRepo",
-    "\\TestRepo\\Controllers",
-    "\\TestRepo\\Request"
+    "\\TestRepo\\Controllers"
   ],
-  "SelectedNode": "\\TestRepo\\Controllers\\RepositoryController.cs",
+  "SelectedNode": "\\TestRepo\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

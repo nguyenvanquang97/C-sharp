@@ -77,6 +77,16 @@ builder.Services.AddHttpClient("MyMockApi", c =>
     c.BaseAddress = new Uri("https://641ad8401f5d999a44546d9a.mockapi.io/sdfe");
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyHeader()
+               .AllowAnyMethod()
+        .AllowCredentials();
+    });
+});
 
 
 

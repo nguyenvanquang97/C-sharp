@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3SaOI0HoM36aO1/y5LJ88AJ0sUlBHvSHJEf85/6VIsHrUzItcLvPYhe3nOAitW/KPNnhjlHC8LElIZsd81l5Rw==",
+  "dgSpecHash": "1mzmhNiqMV9ULmMcb7boEKBXb+p6wtXdsR6+wjBGT9YxnyulDYZNx7lBBxRhfelMEgUvCxjLt7qErgWIeM5xDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\A Quang\\source\\repos\\TestRepo\\TestRepo\\TestRepo.csproj",
+  "projectFilePath": "C:\\Users\\A Quang\\Desktop\\work\\C-sharp\\Repo-localization-mockApi\\TestRepo\\TestRepo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\A Quang\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\A Quang\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
