@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+		<PropertyGroup>
+				<TargetFramework>net6.0</TargetFramework>
+		</PropertyGroup>
+
+		<ItemGroup>
+		  <Compile Remove="Controllers\ProductController.cs" />
+		</ItemGroup>
+
+		<ItemGroup>
+				<PackageReference Include="Autofac" Version="7.0.0" />
+				<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+				<PackageReference Include="DevExtreme.AspNet.Data" Version="2.9.1" />
+				<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.17" />
+				<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.17" />
+				<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.15" />
+				<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+				<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+				<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+				<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+				<PackageReference Include="System.Drawing.Common" Version="7.0.0" />			
+		</ItemGroup>
+
+		<ItemGroup>
+				<ProjectReference Include="..\Wini.Database\Wini.Database.csproj" />
+				<ProjectReference Include="..\Wini.DA\Wini.DA.csproj" />
+				<ProjectReference Include="..\Wini.DL\Wini.DL.csproj" />
+				<ProjectReference Include="..\Wini.SaleMultipleChannel\Wini.SaleMultipleChannel.csproj" />
+				<ProjectReference Include="..\Wini.Simple\Wini.Simple.csproj" />
+				<ProjectReference Include="..\Wini.Utils\Wini.Utils.csproj" />
+		</ItemGroup>
+
+		<ItemGroup>
+				<Compile Update="Helpers\AppSetting.cs">
+						<ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+						<ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+				</Compile>
+		</ItemGroup>
+
+</Project>

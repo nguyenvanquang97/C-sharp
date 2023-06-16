@@ -1,0 +1,62 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using System.Web;
+using Microsoft.Extensions.Logging;
+using Wini.DA;
+using Wini.DA.Cache;
+using Wini.Database;
+using Wini.Simple;
+using Wini.Utils;
+
+namespace Pos.Controllers
+{
+    public class ColorController : BaseController
+    {
+        private readonly ILogger<ColorController> _logger;
+        private IColorDa _colorDa;
+        private readonly ICacheService _cacheService;
+        public ColorController(ILogger<ColorController> logger, IColorDa colorDa)
+        {
+            _logger = logger;
+            _colorDa = colorDa;
+        }
+        [HttpPost]
+        public async Task<IActionResult> GetAll([FromBody] BaseRequest request)
+        {
+            var model = await _colorDa.GetListSimpleByRequest(request);
+            return Json(model);
+        }
+        [HttpPost]
+        public IActionResult Add([FromBody] Color data)
+        {
+            data.Name = HttpUtility.UrlDecode(data.Name);
+            data.Description = HttpUtility.UrlDecode(data.Description);
+            data.Value = HttpUtility.UrlDecode(data.Value);
+            data.IsDeleted = false;
+            data.IsShow = true;
+            //data.UserCreate = int.Parse(UserId);
+            _colorDa.Add(data);
+            _colorDa.Save();
+            return Json(new BaseResponse<Color>() { Data = data, Code = (int)ResponseCode.Success, Message = "Thêm mới dữ liệu thành công" });
+        }
+        [HttpPost]
+        public IActionResult Update([FromBody] Color data)
+        {
+            var model = _colorDa.Update(data);
+            return Json(model);
+        }
+        [HttpPost]
+
+        public BaseResponse<int> Delete(int id)
+        {
+            var model = _colorDa.GetbyId(id);
+            if (model != null)
+            {
+                model.IsDeleted = true;
+                _colorDa.Save();
+                return new BaseResponse<int>() { Data = id, Code = (int)ResponseCode.Success, Message = "Xóa dữ liệu thành công" };
+            }
+            return new BaseResponse<int>() { Data = 0, Code = (int)ResponseCode.Nodata, Message = "Dữ liệu không tồn tài" };
+        }
+    }
+}

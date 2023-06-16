@@ -3,7 +3,7 @@
     "",
     "\\Library",
     "\\Library\\Repositories",
-    "\\Library\\Repositories\\PersonRepository",
+    "\\Library\\Repositories\\UserRepository",
     "\\TestRepo",
     "\\TestRepo\\Controllers"
   ],

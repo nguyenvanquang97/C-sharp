@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\Product\BrandController.cs" />
+    <Compile Remove="Controllers\Product\CategoryController.cs" />
+    <Compile Remove="Controllers\Product\ColorController.cs" />
+    <Compile Remove="Controllers\Product\PictureController.cs" />
+    <Compile Remove="Controllers\Product\ProductDetailController.cs" />
+    <Compile Remove="Controllers\Product\SizeController.cs" />
+    <Compile Remove="Controllers\Product\UnitController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wini.DA\Wini.DA.csproj" />
+    <ProjectReference Include="..\Wini.DL\Wini.DL.csproj" />
+    <ProjectReference Include="..\Wini.Simple\Wini.Simple.csproj" />
+    <ProjectReference Include="..\Wini.Utils\Wini.Utils.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Helpers\AppSetting.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+    </Compile>
+  </ItemGroup>
+
+</Project>

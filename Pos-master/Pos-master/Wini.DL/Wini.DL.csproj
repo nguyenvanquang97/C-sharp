@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wini.Database\Wini.Database.csproj" />
+    <ProjectReference Include="..\Wini.DA\Wini.DA.csproj" />
+    <ProjectReference Include="..\Wini.Simple\Wini.Simple.csproj" />
+    <ProjectReference Include="..\Wini.Utils\Wini.Utils.csproj" />
+  </ItemGroup>
+
+</Project>
